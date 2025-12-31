@@ -1,0 +1,34 @@
+# ============================================================
+# AI Comic Slideshow Generator - Python Dependencies
+# ============================================================
+
+# Core Dependencies
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+pdf2image>=1.16.0
+Pillow>=10.0.0
+moviepy>=1.0.3
+edge-tts>=6.1.0
+numpy>=1.24.0
+
+# User Interface (Streamlit - recommended)
+streamlit>=1.28.0
+
+# Alternative UI Options (uncomment to use)
+# gradio>=4.0.0
+# PyQt6>=6.5.0
+
+# Optional: OpenAI API for higher quality TTS (paid)
+# openai>=1.0.0
+# python-dotenv>=1.0.0
+
+# Development Dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Utilities
+tqdm>=4.66.0
+pyyaml>=6.0
