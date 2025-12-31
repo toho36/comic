@@ -1,0 +1,63 @@
+# Multi-Agent Orchestrator Configuration
+# Comic Slideshow Generator Project
+
+project_name: "Comic Slideshow Generator"
+project_root: "."
+dry_run: false
+max_parallel_agents: 4
+log_level: "INFO"
+git_integration: true
+auto_commit: false
+
+# Workflow phases - executed sequentially
+phases:
+  - name: "Phase 1: Foundation"
+    description: "Setup project structure and configuration"
+    parallel: true
+    agents:
+      - project_structure
+      - dependencies
+      - config_framework
+  
+  - name: "Phase 2: Core Features"
+    description: "Implement ML, OCR, and TTS components"
+    parallel: true
+    agents:
+      - ml_computer_vision
+      - integrations_ocr
+      - audio_tts
+  
+  - name: "Phase 3: Integration & UI"
+    description: "Integrate components and build UI"
+    parallel: true
+    agents:
+      - backend_processor
+      - frontend_ui
+      - video_generator
+  
+  - name: "Phase 4: Quality & Deployment"
+    description: "Testing, documentation, optimization, and security"
+    parallel: true
+    agents:
+      - testing
+      - documentation
+      - optimization
+      - security
+
+# Agent-specific settings (optional overrides)
+agents:
+  project_structure:
+    timeout_seconds: 300
+    max_retries: 2
+  
+  dependencies:
+    timeout_seconds: 300
+    max_retries: 2
+  
+  ml_computer_vision:
+    timeout_seconds: 900
+    max_retries: 3
+  
+  testing:
+    timeout_seconds: 1200
+    max_retries: 1
